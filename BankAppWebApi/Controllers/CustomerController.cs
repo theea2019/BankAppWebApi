@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.WebPages;
 using Bank.BusinessLogic;
 using Bank.Commons.Concretes.Helpers;
@@ -14,6 +15,7 @@ using Microsoft.Ajax.Utilities;
 
 namespace BankAppWebApi.Controllers
 {
+    [EnableCors(origins:"*", headers:"*",methods:"*")]
     public class CustomerController : ApiController
     {
         // GET api/<controller>

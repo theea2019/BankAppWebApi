@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Bank.BusinessLogic;
 using Bank.Commons.Concretes.Helpers;
 using Bank.Commons.Concretes.Logger;
@@ -10,6 +11,7 @@ using Microsoft.Ajax.Utilities;
 
 namespace BankAppWebApi.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Transaction")]
     public class TransactionController : ApiController
     {
